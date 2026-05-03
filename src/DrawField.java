@@ -2,16 +2,18 @@ import javax.swing.*;
 import java.awt.*;
 
 public class DrawField extends JPanel{
-    CollectionNumbers collect = new CollectionNumbers();
-    private int[][] num = collect.getNumbers();;
+    CollectionNumbers collect;
+
     private final int PosNumX = 30;
     private final int PosNumY = 90;
-    public void updateNumbers(){
-        collect.ShuffleNumbers();
-        num = collect.getNumbers();
+    public DrawField(CollectionNumbers collect){
+        this.collect = collect;
+
     }
+
     @Override
     protected void paintComponent(Graphics g){
+        int[][] num = collect.getNumbers();
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
 

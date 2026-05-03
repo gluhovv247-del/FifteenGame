@@ -13,12 +13,6 @@ public class CollectionNumbers {
     private int emptyRow = 3;
     private int emptyCol = 3;
 
-    public int getEmptyRow(){
-        return emptyRow;
-    }
-    public int getEmptyCol(){
-        return emptyCol;
-    }
     public int[][] getNumbers(){
         return numbers;
     }
@@ -38,28 +32,28 @@ public class CollectionNumbers {
         }
     }
 
-    public void MoveEmptyUp(){
+    public void MoveDown(){
         if(emptyRow > 0){
             numbers[emptyRow][emptyCol] = numbers[emptyRow-1][emptyCol];
             numbers[emptyRow-1][emptyCol] = 0;
             emptyRow--;
         }
     }
-    public void MoveEmptyDown(){
+    public void MoveUp(){
         if(emptyRow < 3){
             numbers[emptyRow][emptyCol] = numbers[emptyRow+1][emptyCol];
             numbers[emptyRow+1][emptyCol] = 0;
             emptyRow++;
         }
     }
-    public void MoveEmptyRight(){
+    public void MoveLeft(){
         if(emptyCol < 3){
             numbers[emptyRow][emptyCol] = numbers[emptyRow][emptyCol+1];
             numbers[emptyRow][emptyCol+1] = 0;
             emptyCol++;
         }
     }
-    public void MoveEmptyLeft(){
+    public void MoveRight(){
         if(emptyCol > 0){
             numbers[emptyRow][emptyCol] = numbers[emptyRow][emptyCol-1];
             numbers[emptyRow][emptyCol-1] = 0;

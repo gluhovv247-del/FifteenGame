@@ -1,7 +1,7 @@
 import javax.swing.*;
 
 public class InitForm extends JFrame{
-    protected DrawField num = new DrawField();
+    protected DrawField num;
     protected JButton buttonShuffle = new JButton("Перемешать");
     JLayeredPane layeredPane = new JLayeredPane();
 
