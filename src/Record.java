@@ -2,8 +2,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Record {
-    public int minutes;
-    public int seconds;
+    private int minutes;
+    private int seconds;
     private LocalDateTime dateTime;
     public Record(int minutes, int seconds){
         this.seconds = seconds;
