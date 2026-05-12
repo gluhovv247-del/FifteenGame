@@ -8,7 +8,6 @@ public class DrawField extends JPanel{
     private final int PosNumY = 90;
     public DrawField(CollectionNumbers collect){
         this.collect = collect;
-
     }
 
     @Override
@@ -34,7 +33,5 @@ public class DrawField extends JPanel{
                 }
             }
         }
-
-
     }
 }

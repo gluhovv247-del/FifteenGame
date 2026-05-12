@@ -18,7 +18,6 @@ public class CollectionNumbers {
     }
     public void ShuffleNumbers(){
         for(int i = 0; i<1000; i++){
-
             int move[] = moves[random.nextInt(4)];
             int newRow = emptyRow + move[0];
             int newCol = emptyCol + move[1];
@@ -59,5 +58,20 @@ public class CollectionNumbers {
             numbers[emptyRow][emptyCol-1] = 0;
             emptyCol--;
         }
+    }
+    public boolean victoryCondition(){
+        int counter = 1;
+        for(int i = 0; i < 4; i++){
+            for(int j = 0; j < 4; j++){
+                if(i == 3 && j == 3){
+                    counter = 0;
+                }
+                if(numbers[i][j] != counter){
+                    return false;
+                }
+                counter++;
+            }
+        }
+        return true;
     }
 }
